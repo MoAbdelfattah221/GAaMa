@@ -1,0 +1,217 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/image.png);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+::selection{
+    background-color: #f1b3b1;
+    color: white;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+.header{
+    padding: 15px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header a img{
+    width: 120px;
+    max-width: 100%;
+}
+@media (max-width: 991px) {
+    .header a img{
+        width: 100px;
+    }
+}
+.header nav{
+    display: flex;
+}
+.header nav i{
+    cursor: pointer;
+    color: #5f5f5f;
+    font-size: 24px;
+}
+.header nav i:hover + .links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    top: 80px;
+    background-color: #caeae5;
+    z-index: 3;
+}
+.header nav i:hover + .links li{
+    margin: 0;
+    padding: 20px 0;
+    margin-left: 10px;
+    border-bottom: 1px solid rgb(105, 101, 101);
+}
+@media (min-width: 992px) {
+    .header nav i{
+        display: none;
+    }
+}
+.header nav .links{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 991px) {
+    .header nav .links{
+        display: none;
+    }
+}
+.header nav .links li{ 
+    margin-left: 25px;
+    position: relative;
+}
+.header nav .links li::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f1b3b1;
+    bottom: 35px;
+    opacity: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+@media (max-width: 991px) {
+    .header nav .links li::before{
+        display: none;
+    }
+}
+.header nav .links li:hover::before{
+    opacity: 1;
+    bottom: 25px;
+}
+.header nav .links li a{
+    text-decoration: none;
+    color: #5f5f5f;
+    text-transform: uppercase;
+}
+.landing .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .landing .container{
+        flex-direction: column;
+    }
+}
+.landing .container .text{
+    flex-basis: 30%;
+}
+.landing .container .text h1::selection{
+    background-color: #caeae5;
+    color: white;
+}
+@media (max-width: 991px) {
+    .landing .container .text{
+        text-align: center;
+    }
+}
+.landing .container .text h1{
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+.landing .container .audio{
+    flex-basis: 30%;
+    position: relative;
+}
+@media (max-width: 991px) {
+    .landing .container .audio{
+        height: 100px;
+        width: 212px;
+    }
+}
+.landing .container .audio .sound-text{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+}
+.landing .container .audio .sound-text span{
+    margin-right: 15px;
+    color: #5f5f5f;
+}
+.landing .container .audio .sound-text img{
+    width: 55px;
+    max-width: 100%;
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+    position: relative;
+}
+@media (max-width: 991px) {
+    .footer{
+        bottom: -220px;
+    }
+}
+.footer p{
+    font-size: 13px;
+}
+@media (max-width: 991px) {
+    .footer p{
+        font-size: 12px;
+    }
+}
+.footer p span{
+    font-weight: bold;
+    color: #0d8579;
+}
+.footer p i{
+    color: #98002e;
+}
+.footer p a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(195 109 107);
+}
+.footer p a:hover{
+    text-decoration: underline;
+}
