@@ -1,2 +1,4 @@
 # GAama
- This is a Responsive Landing Page for a Music Company.
+This is a Responsive Header for a Music Company.
+Technologies used.. 
+Html , CSS
